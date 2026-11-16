@@ -1,0 +1,61 @@
+/* Crop Quality Certification — uses the app's green tokens (styles.css). */
+.crumbs { font-size: 13px; color: var(--mute); margin-bottom: 8px; }
+.crumbs a { color: var(--brand); text-decoration: none; }
+.cert-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.cert-danger { color: var(--bad); border-color: #f3c4c4; }
+.cert-danger:hover { background: var(--bad-bg); }
+.cert-danger-solid { background: var(--bad); border-color: var(--bad); }
+.cert-danger-solid:hover { background: #991b1b; }
+.cert-layout { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(280px, 1fr); gap: 16px; align-items: start; }
+.cert-facts { display: grid; grid-template-columns: 170px 1fr; gap: 8px 14px; margin: 0; font-size: 14px; }
+.cert-facts dt { color: var(--mute); }
+.cert-facts dd { margin: 0; font-weight: 500; overflow-wrap: anywhere; }
+.cert-facts.compact { grid-template-columns: 100px 1fr; font-size: 13.5px; }
+.cert-row { cursor: pointer; }
+.cert-row:hover td { background: var(--brand-50); }
+.cert-row.on td { background: var(--brand-50); box-shadow: inset 3px 0 0 var(--brand); }
+.cert-empty { display: grid; justify-items: center; text-align: center; gap: 6px; padding: 32px 20px; color: var(--mute); }
+.cert-empty svg { color: var(--brand); }
+.cert-qr { display: flex; gap: 16px; align-items: center; }
+.cert-qr img { border: 1px solid var(--line); border-radius: 12px; padding: 6px; background: #fff; flex: none; }
+.cert-basis { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 14px; color: var(--text-2); }
+.cert-checks { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 10px; }
+.cert-check { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; }
+.cert-audit { list-style: none; padding: 0 0 0 14px; margin: 0; border-left: 2px solid var(--line); display: grid; gap: 12px; }
+.cert-audit li { position: relative; font-size: 14px; }
+.cert-audit li::before { content: ""; position: absolute; left: -20px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--brand); box-shadow: 0 0 0 3px var(--brand-50); }
+
+/* verdict banners */
+.cert-verdict { display: flex; gap: 12px; align-items: flex-start; border-radius: 14px; padding: 14px 16px; margin: 12px 0 16px; border: 1px solid; }
+.cert-verdict.good { background: var(--brand-50); border-color: #bbf7d0; color: var(--brand-700); }
+.cert-verdict.warn { background: var(--warn-bg); border-color: #fde68a; color: var(--warn); }
+.cert-verdict.bad { background: var(--bad-bg); border-color: #fecaca; color: var(--bad); }
+.cert-verdict b { color: inherit; }
+.cert-verdict > div { color: var(--ink); }
+.cert-verdict > div > b { display: block; }
+.cert-verdict.good > div > b { color: var(--brand-700); } .cert-verdict.bad > div > b { color: var(--bad); } .cert-verdict.warn > div > b { color: var(--warn); }
+.cert-verdict.big { padding: 18px 20px; font-size: 15px; }
+.cert-verdict.big > div > b { font-size: 19px; }
+.cert-drop { display: inline-flex; align-items: center; gap: 8px; border: 1.5px dashed #a6d3b0; border-radius: 12px; padding: 12px 18px; cursor: pointer; color: var(--brand-700); font-weight: 600; background: #fbfefc; }
+.cert-drop:hover { background: var(--brand-50); }
+.cert-drop input { display: none; }
+.cert-lookup { display: flex; gap: 8px; }
+.cert-lookup input { flex: 1; text-transform: uppercase; }
+
+/* public pages (no login) */
+.pubpage { min-height: 100vh; background: #f6fbf7; }
+.pub-top { background: #fff; border-bottom: 1px solid var(--line); }
+.pub-wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.pub-top .pub-wrap { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+.pub-top .brand { padding: 0; margin: 0; }
+.pubpage main { padding-top: 24px; padding-bottom: 48px; }
+.pubpage h1 { font-size: 26px; letter-spacing: -.02em; }
+
+@media (max-width: 900px) {
+  .cert-layout { grid-template-columns: 1fr; }
+  .cert-facts { grid-template-columns: 120px 1fr; }
+}
+@media (max-width: 520px) {
+  .cert-qr { flex-direction: column; align-items: flex-start; }
+  .pub-top .note { display: none; }
+}

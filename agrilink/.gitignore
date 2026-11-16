@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+__pycache__/
+.pytest_cache/
+*.pyc
+services/ml/models/
+storage/

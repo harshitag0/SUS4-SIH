@@ -1,0 +1,24 @@
+# Roadmap
+- [x] Buyer dashboard: post requirement, live price hint, bond list
+- [x] Farmer dashboard: live requirements, supply-demand engine, price prediction (dummy data)
+- [x] Digital bond: draft, dual signature, hash-chain verification
+- [x] Backend API + database (Express + MongoDB) and Python ML service
+- [x] Real-time notifications (Socket.IO + saved inbox), live weather (Open-Meteo), live platform demand
+- [x] Live mandi prices via data.gov.in (needs API key)
+- [ ] Real APEDA export history + APMC price history for the forecast
+- [x] Multilingual farmer app (en/hi/mr), login + farm profile + personalised dashboard
+- [x] Supply–Demand engine: trained gradient-boosting model, 80% ranges, holdout validation, personal plan
+- [ ] Load real APEDA export data into services/ml/data and retrain
+- [x] Price (cost) prediction engine: trained model, demand scenarios, accept / negotiate / sell-locally advice per offer
+- [ ] Load real Agmarknet price history and retrain
+- [x] Cost & Profit engine: trained cost model, year-by-year comparison, channels, what-if, my costs vs district
+- [x] Check before you sign: demand + price + profit + capacity + weather verdict on every deal
+- [ ] Load real cost-of-cultivation data and retrain
+- [ ] Photo grading + certificates
+- [ ] Force-majeure workflow after weather alerts
+- [ ] WhatsApp/SMS bot (Marathi / Hindi / English)
+- [x] Digital agreements: OTP e-sign, signed PDF, SHA-256 on Polygon (local chain), verify, amendments, milestones, audit trail
+- [ ] Production e-signature (Zoho Sign / DocuSign / Aadhaar eSign) and S3 Object Lock storage
+- [ ] Deploy AgreementRegistry to Polygon Amoy, then mainnet
+- [ ] Escrow + settlement engine; reliability scores
+- [ ] Pilot with 1 FPO and 2 Singapore importers

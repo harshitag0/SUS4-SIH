@@ -1,0 +1,30 @@
+services:
+  mongo:
+    image: mongo:7
+    volumes: [mongo-data:/data/db]
+    ports: ["27017:27017"]
+
+  ml:
+    build: ./services/ml
+    environment:
+      DATA_GOV_IN_API_KEY: ${DATA_GOV_IN_API_KEY:-}
+    ports: ["8000:8000"]
+
+  api:
+    build: ./server
+    environment:
+      MONGO_URI: mongodb://mongo:27017/agrilink
+      ML_URL: http://ml:8000
+      JWT_SECRET: change-me
+    depends_on: [mongo, ml]
+    ports: ["4000:4000"]
+
+  web:
+    build: ./client
+    environment:
+      API_URL: http://api:4000
+    depends_on: [api]
+    ports: ["5173:5173"]
+
+volumes:
+  mongo-data:

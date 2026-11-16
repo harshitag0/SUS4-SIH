@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+  <!-- Light, airy Konkan orchard scene used behind the landing hero. Kept pale so dark text stays readable. -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3faf5"/><stop offset=".6" stop-color="#eef8ef"/><stop offset="1" stop-color="#f8f6e6"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fffbe8"/><stop offset=".5" stop-color="#fff1bf" stop-opacity=".75"/><stop offset="1" stop-color="#fff1bf" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="h1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e2f2e4"/><stop offset="1" stop-color="#d3ebd7"/></linearGradient>
+    <linearGradient id="h2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe8d3"/><stop offset="1" stop-color="#bfe0c5"/></linearGradient>
+    <linearGradient id="h3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b5dbbd"/><stop offset="1" stop-color="#a6d3b0"/></linearGradient>
+    <radialGradient id="canopy" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#9fd1aa"/><stop offset="1" stop-color="#7fbf8f"/></radialGradient>
+    <radialGradient id="mango" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#ffe9a3"/><stop offset="1" stop-color="#f5c25a"/></radialGradient>
+    <g id="tree">
+      <rect x="-5" y="-8" width="10" height="52" rx="4" fill="#b59a7c"/>
+      <ellipse cx="0" cy="-34" rx="60" ry="44" fill="url(#canopy)"/>
+      <ellipse cx="-30" cy="-14" rx="34" ry="26" fill="url(#canopy)"/>
+      <ellipse cx="31" cy="-12" rx="35" ry="26" fill="url(#canopy)"/>
+      <ellipse cx="-16" cy="-26" rx="6" ry="8" fill="url(#mango)"/>
+      <ellipse cx="20" cy="-8" rx="6" ry="8" fill="url(#mango)"/>
+      <ellipse cx="34" cy="-36" rx="6" ry="8" fill="url(#mango)"/>
+      <ellipse cx="2" cy="-50" rx="6" ry="8" fill="url(#mango)"/>
+    </g>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1220" cy="250" r="260" fill="url(#sun)"/>
+  <path d="M0 560 C 280 500 540 520 800 540 S 1300 480 1600 520 V900 H0Z" fill="url(#h1)"/>
+  <g opacity=".55">
+    <use href="#tree" transform="translate(980 560) scale(.55)"/><use href="#tree" transform="translate(1090 548) scale(.5)"/>
+    <use href="#tree" transform="translate(1210 540) scale(.55)"/><use href="#tree" transform="translate(1340 535) scale(.5)"/>
+    <use href="#tree" transform="translate(1470 540) scale(.55)"/>
+  </g>
+  <path d="M0 640 C 320 590 600 640 880 625 S 1320 580 1600 615 V900 H0Z" fill="url(#h2)"/>
+  <g opacity=".75">
+    <use href="#tree" transform="translate(1050 640) scale(.75)"/><use href="#tree" transform="translate(1230 628) scale(.8)"/>
+    <use href="#tree" transform="translate(1420 630) scale(.75)"/>
+  </g>
+  <path d="M0 740 C 360 700 700 760 1000 735 S 1420 700 1600 720 V900 H0Z" fill="url(#h3)"/>
+  <!-- orchard rows -->
+  <g stroke="#9ccaa6" stroke-width="2" opacity=".5" fill="none">
+    <path d="M0 800 C 400 770 900 810 1600 780"/><path d="M0 840 C 420 815 920 850 1600 825"/><path d="M0 880 C 440 860 940 890 1600 868"/>
+  </g>
+</svg>

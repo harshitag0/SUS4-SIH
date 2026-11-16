@@ -1,0 +1,65 @@
+/* Stage-wise crop quality assessment — app green tokens (styles.css). */
+.stg-neutral { background: var(--line-2); color: var(--text-2); }
+.stg-crop { display: block; text-decoration: none; color: inherit; transition: border-color .15s, box-shadow .15s; }
+.stg-crop:hover { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(21, 128, 61, .1); }
+.stg-crop-top { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--mute); }
+.stg-open { display: inline-flex; gap: 6px; align-items: center; margin-top: 10px; color: var(--brand); font-weight: 600; font-size: 14px; }
+.stg-new { display: grid; gap: 10px; }
+.stg-new label, .stg-field { display: grid; gap: 5px; font-size: 13.5px; font-weight: 600; color: var(--text-2); }
+.stg-field small { font-weight: 500; }
+
+.stg-track { list-style: none; padding: 0; margin: 0 0 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+.stg-track button { width: 100%; text-align: left; display: grid; gap: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 10px 12px; cursor: pointer; font: inherit; color: var(--ink); }
+.stg-track li.on button { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(21, 128, 61, .12); }
+.stg-track .n { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; background: var(--line-2); color: var(--text-2); font-weight: 700; font-size: 12px; }
+.stg-track li.approved .n { background: var(--brand); color: #fff; }
+.stg-track li.pending_review .n, .stg-track li.requires_correction .n { background: var(--warn-bg); color: var(--warn); }
+.stg-track li.rejected .n { background: var(--bad-bg); color: var(--bad); }
+.stg-track .nm { font-weight: 600; font-size: 14px; }
+.stg-track .pill { justify-self: start; }
+
+.stg-layout { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr); gap: 16px; align-items: start; }
+.stg-form { display: grid; gap: 12px; }
+.stg-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.stg-yn { display: flex; gap: 6px; }
+.stg-thumbs { display: flex; gap: 8px; flex-wrap: wrap; }
+.stg-thumbs img { width: 84px; height: 84px; object-fit: cover; border-radius: 10px; border: 1px solid var(--line); }
+.stg-steps { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 14px; color: var(--text-2); }
+
+.stg-summary { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.stg-ring .trk { fill: none; stroke: var(--line-2); stroke-width: 8; }
+.stg-ring .val { fill: none; stroke-width: 8; stroke-linecap: round; }
+.stg-ring.ok .val { stroke: var(--good); } .stg-ring.warn .val { stroke: #d97706; } .stg-ring.bad .val { stroke: var(--bad); }
+.stg-ring text { font: 700 19px Inter, system-ui, sans-serif; fill: var(--ink); }
+.stg-score.none { width: 76px; height: 76px; border-radius: 50%; border: 8px solid var(--line-2); display: grid; place-items: center; align-content: center; text-align: center; }
+.stg-score.none span { font-size: 9px; color: var(--mute); }
+.stg-decision.approved { border-color: #bbf7d0; background: var(--brand-50); }
+.stg-decision.rejected { border-color: #fecaca; background: var(--bad-bg); }
+.stg-decision.requires_correction { border-color: #fde68a; background: var(--warn-bg); }
+.stg-issues { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; font-size: 14px; }
+.stg-issues .pill { margin-right: 8px; text-transform: capitalize; }
+.stg-remarks { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 14px; color: var(--text-2); }
+.stg-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.stg-gallery figure { margin: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; }
+.stg-gallery img, .stg-img-ph { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: grid; place-items: center; background: var(--line-2); color: var(--mute); }
+.stg-gallery figcaption { padding: 8px 10px; font-size: 13px; display: grid; gap: 2px; }
+
+.stg-decide { display: grid; gap: 12px; }
+.stg-choices { display: grid; gap: 6px; }
+.stg-choice { display: flex; gap: 8px; align-items: center; border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; cursor: pointer; font-weight: 600; font-size: 14px; }
+.stg-choice.on.approved { border-color: var(--brand); background: var(--brand-50); }
+.stg-choice.on.requires_correction { border-color: #f59e0b; background: var(--warn-bg); }
+.stg-choice.on.rejected { border-color: var(--bad); background: var(--bad-bg); }
+.stg-confirm { display: flex; gap: 8px; align-items: flex-start; font-size: 13.5px; color: var(--text-2); }
+.stg-confirm input { margin-top: 3px; }
+.stg-decide textarea, .stg-settings textarea { width: 100%; box-sizing: border-box; }
+
+.stg-settings { display: grid; gap: 10px; }
+.stg-settings .card { margin: 0; display: grid; gap: 8px; }
+.stg-settings .card.off { opacity: .6; }
+.stg-set-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.stg-set-row .n { width: 26px; height: 26px; border-radius: 50%; background: var(--brand-50); color: var(--brand-700); font-weight: 700; display: grid; place-items: center; font-size: 13px; }
+.stg-set-row input:not([type]) { flex: 1; min-width: 180px; }
+.stg-toggle { display: inline-flex; gap: 6px; align-items: center; font-size: 13.5px; font-weight: 600; }
+
+@media (max-width: 900px) { .stg-layout { grid-template-columns: 1fr; } }
